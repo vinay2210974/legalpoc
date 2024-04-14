@@ -71,7 +71,7 @@ def send_email(email_id, password, to, subject, body):
     smtp_server.sendmail(email_id, to, msg)
     smtp_server.quit()
 
-# Schedule email reading every 5 minutes
+# Schedule email reading every 1 minute
 schedule.every(1).minutes.do(read_emails, email_id, password)
 
 @app.route('/')
